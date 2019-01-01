@@ -1,0 +1,148 @@
+Quartus Prime Archive log --	C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_tmp_archive.qarlog
+
+Archive:	C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_tmp_archive.qar
+Date:		Tue Jan 01 16:34:16 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/AI_Core_hw.tcl
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/AI_interface.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper2.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite_2.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite_Health.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Enemy_Jump (1).sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Enemy_Jump.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/PLLJ_PLLSPE_INFO.txt
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/VGA_controller.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/__lab7_usb.auto.qarlog
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball.txt
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball2.txt
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball2_7.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball2_8.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball2_9.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball4.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball_sprite.txt
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy4.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy4Hit.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemyHitJump.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy_health.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy_health4.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/final_project (1).sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/final_project (2).sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/final_project.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/final_project4.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/frameCounter.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/health.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/hpi_io_intf.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab7_usb.qsf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8.qpf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8.qsf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_assignment_defaults.qdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_description.txt
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc.qsys
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc.sopcinfo
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/lab8_soc.cmp
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/lab8_soc.debuginfo
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/lab8_soc.qip
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/lab8_soc.regmap
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/lab8_soc.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/AI_interface.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_avalon_sc_fifo.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_default_burst_converter.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_incr_burst_converter.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_address_alignment.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_new.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_master_agent.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_master_translator.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_slave_agent.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_slave_translator.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_merlin_width_adapter.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_reset_controller.sdc
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_reset_controller.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_reset_synchronizer.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_std_synchronizer_nocut.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/altera_wrap_burst_converter.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_irq_mapper.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_jtag_uart_0.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_key.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_keycode.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_001.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_demux_001.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_cmd_mux_002.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_001.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_002.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_003.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_router_004.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_demux_002.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_mm_interconnect_0_rsp_mux_001.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.sdc
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_tck.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_ociram_default_contents.mif
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_a.mif
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_rf_ram_b.mif
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_nios2_gen2_0_cpu_test_bench.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.hex
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_onchip_memory2_0.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_address.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_cs.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_otg_hpi_data.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_sdram.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_sdram_pll.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc/synthesis/submodules/lab8_soc_sysid_qsys_0.v
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_soc1.qsys
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_tmp_archive.qarlog
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/mylog.txt.txt
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (1).sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (2).sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (3).sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (4).sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform4.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ram.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/sdcFile.sdc
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/testbench.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.ppf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.qip
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.v
+c:/intelfpga_lite/18.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 131 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Jan 01 16:34:21 2019
+Source archive file:	C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/lab8_tmp_archive.qar
+Archive was extracted into	C:/UIUCFall2018/ECE385/Final/
+		 - successfully.

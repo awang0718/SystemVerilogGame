@@ -1,0 +1,309 @@
+module platform(
+input logic Clk,			//clock
+input logic Reset,		//reset
+input logic frame_clk,	//clock for vga frame
+input logic[7:0] keycode,					//keys from keyboard
+input logic[9:0] DrawX, DrawY,			//inputs for color mapper
+input logic[13:0] player_location,		//input from character module for position of the player relative 
+													//to the whole map
+//input logic		stop;							//the char is stopped, player cannot move
+output logic[9:0] start_X,					//start position of player
+output logic[9:0] start_Y,					//start position of player
+output logic is_platform,					//color mapper output
+output logic can_move,						//output to player module to see if char can move relative to screen
+output logic[13:0] top,						//output that is top and bot for current player location
+output logic[13:0] bot,
+output logic [13:0] platform_change[0:2][0:2]		//output of platform changes, hopefully for the collision
+);
+/*
+NOTE:
+The player location is not changed here, I am hoping that will be changed in the player module.
+Right now, I output the Y coordinate of a platform based off the current player location, but this does not
+account for collisions in future actions (the frame still shifts for collision). The collisions
+should be dealt in player or in a completely new module.
+*/
+
+	//copied straight from ball.sv
+	logic frame_clk_delayed, frame_clk_rising_edge;
+	always_ff @ (posedge Clk) begin
+		frame_clk_delayed <= frame_clk;
+		frame_clk_rising_edge <= (frame_clk == 1'b1) && (frame_clk_delayed == 1'b0);
+	end
+
+	//parameters
+	parameter [9:0] Y_Min = 10'd0;       // Topmost point on the Y axis
+	parameter [9:0] Y_Max = 10'd479;     // Bottommost point on the Y axis
+	parameter [9:0] X_Max = 10'd639;   
+	parameter [9:0] X_Min = 10'd0;
+	parameter [9:0] speed = 10'd10;		// speed of player
+	parameter [13:0] platform_length = (7*X_Max);		//length of total map
+	//logic[3:0] change_num = 4'b0011;
+	//	integer change_num;
+	//assign change_num = 32'd3;
+//	logic [13:0] platform_change[0:2][0:2];	//instantiate array that contains changes in platform heights + thickness
+	//logic [13:0] location_of_player;
+	logic [13:0] left_bound;						//left bound of screen relative to map
+	logic [13:0] right_bound;						//right bound of screen relative to map
+//	logic [9:0] upper_bound;						
+//	logic [9:0] lower_bound;
+	
+	//logic [13:0] location_of_player_in;
+	logic [13:0] left_bound_in;					//inputs to the registers updated in always_comb
+	logic [13:0] right_bound_in;
+	logic [13:0] top_in;
+	logic [13:0] bot_in;
+	logic can_move_in;	
+	//assign stop = 1'b0;
+	//assign stop_draw = 1'b0;
+	
+	//logic topbot_change, draw_change;
+					
+	assign start_X = 10'd100;						//player start position
+	assign start_Y = 10'd300;
+	
+	//CREATING ALL PLATFORM CHANGES (x coordinate, top height, bot height)
+	assign platform_change = '{'{14'b0, 14'd300, 14'd350},
+										'{14'd1000, 14'd400, 14'd450},	
+										'{14'd6390, 14'd400, 14'd450} };
+										
+	always_ff @ (posedge Clk)			//register for the values
+	begin
+		if (Reset)
+			begin
+				left_bound <= 13'b0;
+				right_bound <= 13'd638;
+				top <= 10'd300;
+				bot <= 10'd350;
+				can_move <= 1;
+		end
+		else
+		begin
+				left_bound <= left_bound_in;
+				right_bound <= right_bound_in;
+				bot <= bot_in;
+				top <= top_in;
+				can_move <= can_move_in;
+		end
+	end
+
+//	always_ff @ (Clk)
+//	begin
+//		//change_num <= 32'd3;
+//		if (Reset)
+//			begin
+//				top <= 10'd300;
+//				bot <= 10'd350;
+//			end
+//		else if (topbot_change)
+//		begin
+//			//change_num <= 32'd3;
+//			for (int i = 1; i < 3; i++)
+//			begin
+//				if (player_location < platform_change[i][0])
+//				begin
+//					top <= platform_change[i-1][1];
+//					bot <= platform_change[i-1][2];
+//					break;
+//				end
+//				else
+//					begin
+//						top <= top;
+//						bot <= bot;
+//					end
+//			end
+//		end
+//		else
+//		begin
+//			top <= top;
+//			bot <= bot;
+//			//change_num <= 32'd3;
+//		end
+//	end	
+		
+//	always_ff @ (Clk)
+//	begin
+//		if (Reset)
+//			is_platform <= 1'b0;
+//		else if (draw_change)
+//		begin
+//			for (int i = 0; i < 3; i++)
+//			begin
+//				if (DrawX <= platform_change[i][0])
+//				begin
+//					if (DrawY <= platform_change[i][2] && DrawY >= platform_change[i][1])
+//					begin
+//						is_platform <= 1'b1;
+//						break;
+//					end
+//					else
+//						is_platform <= 1'b0;
+//				end
+//				else	
+//					is_platform <= 1'b0;
+//			end
+//		end
+//		else
+//			is_platform <= 1'bZ;
+//	end
+	
+	always_comb
+	begin
+		//change_num = 32'd3;
+		left_bound_in = left_bound;					//default nothing changes
+		right_bound_in = right_bound;
+		can_move_in = can_move;
+		top_in = top;
+		bot_in = bot;
+		if (frame_clk_rising_edge)
+		begin
+			unique case (keycode)						//takes keycode only for left and right
+				8'd04:	// A: Move left
+				begin
+					if (left_bound == 0)					//if at left edge already, dont change bounds
+					begin
+						//left_bound_in = left_bound;
+						//right_bound_in = right_bound;
+						can_move_in = 1'b1;				//player can move
+						//topbot_change = 1'b1;
+						for (int i = 1; i < 3; i++)		//get the top and bot based off player location
+						begin
+							if (player_location < platform_change[i][0])
+							begin
+								top_in = platform_change[i-1][1];
+								bot_in = platform_change[i-1][2];
+								break;
+							end
+						end
+					end
+					else if ((left_bound - speed) <= 0)			//if not at left edge, but player movement + speed is past
+																			//left edge
+					begin
+						left_bound_in = 14'b0;						//change bounds to be right on left edge
+						right_bound_in = 14'd638;
+						can_move_in = 1'b1;							//player can move
+						//topbot_change = 1'b1;
+						for (int i = 1; i < 3; i++)				//get top and bot based off player location
+						begin
+							if (player_location < platform_change[i][0])
+							begin
+								top_in = platform_change[i-1][1];
+								bot_in = platform_change[i-1][2];
+								break;
+							end
+						end
+					end
+					else													//if not even close to edge
+					begin
+						left_bound_in = left_bound - speed;		//bounds change based off player speed
+						right_bound_in = right_bound - speed;
+						can_move_in = 1'b0;							//player can move
+						//topbot_change = 1'b1;
+						for (int i = 1; i < 3; i++)				//get top and bot based off player location
+						begin
+							if (player_location < platform_change[i][0])		//get top and bot based off player location
+							begin
+								top_in = platform_change[i-1][1];
+								bot_in = platform_change[i-1][2];
+								break;
+							end
+						end
+					end
+				end
+				8'd07:	// D: Move right
+				begin
+					if (right_bound == (platform_length))			//if at right edge already, dont change bounds
+					begin
+						//left_bound_in = left_bound;
+						//right_bound_in = right_bound;
+						can_move_in = 1'b1;								//player can move
+						//topbot_change = 1'b1;
+						for (int i = 1; i < 3; i++)					//get top and bot based off player location
+						begin
+							if (player_location  < platform_change[i][0])
+							begin
+								top_in = platform_change[i-1][1];
+								bot_in = platform_change[i-1][2];
+								break;
+							end
+						end
+					end
+					else if ((right_bound + speed) >= (platform_length))		//if not at right edge, but player movement + 
+																								//speed is past right edge
+					begin
+						left_bound_in =  (platform_length- X_Max);				//change right bound to all the way right
+						right_bound_in = (platform_length);
+						can_move_in = 1'b1;
+						//topbot_change = 1'b1;
+						for (int i = 1; i < 3; i++)				//get top and bot based off player location
+						begin
+							if (player_location < platform_change[i][0])
+							begin
+								top_in = platform_change[i-1][1];
+								bot_in = platform_change[i-1][2];
+								break;
+							end
+						end
+					end
+					else										//if not close to edge
+					begin
+						left_bound_in = left_bound + speed;			//change bounds based off of movement
+						right_bound_in = right_bound + speed;
+						can_move_in = 1'b0;								//player can move
+						//topbot_change = 1'b1;
+						for (int i = 1; i < 3; i++)			//get top and bot based off player location
+						begin
+							if (player_location < platform_change[i][0])
+							begin
+								top_in = platform_change[i-1][1];
+								bot_in = platform_change[i-1][2];
+								break;
+							end
+						end
+					end
+				end
+				
+				default:							//default: nothing happens
+				begin
+					left_bound_in = left_bound;
+					right_bound_in = right_bound;
+					can_move_in = 1'b0;
+					top_in = top;
+					bot_in = bot;
+					//topbot_change = 1'b0;
+				end
+			endcase
+		end
+	end
+	
+	always_comb 			//for color mapper
+	begin
+		//change_num = 32'd3;
+		is_platform = 1'b0;			//default: not a platform
+		
+		for (int i = 0; i < 3; i++)		//run through the platform change
+		begin
+			if (DrawX == 10'b0)			//when DrawX is zero, use first plat value
+			begin
+				if (Draw_Y <= platform_change[0][2] && DrawY >= platform_change[0][2])	//if between first plat value,
+					is_platform = 1'b1;																	//platform is 1
+				else
+					is_platform = 1'b0;
+			end
+			else if (DrawX < platform_change[i][0])			//find drawX position in platform change
+			begin
+				if (DrawY <= platform_change[i-1][2] && DrawY >= platform_change[i-1][1])	//if between upper and lower bounds
+																												//of Y coordinates
+				begin
+					is_platform = 1'b1;			//becomes platform
+					break;
+				end
+				else
+					is_platform = 1'b0;
+			end
+			else	
+				is_platform = 1'b0;
+		end
+		//draw_change = 1'b1;
+	end
+	
+endmodule

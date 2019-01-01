@@ -1,0 +1,359 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/simulation/modelsim
+vball4
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1544563696
+!i10b 1
+!s100 RNW_MK9Q:jLg2zfSZ6BfT1
+Ill@mSb<alPCA;hlLA]C`T2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ball4_sv_unit
+S1
+R0
+w1544504239
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball4.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball4.sv
+Z4 L0 17
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1544563696.000000
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball4.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided
+Z9 tCvgOpt 0
+vcolor_mapper4Sprite
+R1
+R2
+!i10b 1
+!s100 ShBo7O>M3NHzU^;mDgS6i2
+IML;T:I?4dzG9XHfenA6F00
+R3
+!s105 Color_Mapper4Sprite_sv_unit
+S1
+R0
+w1544523898
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite.sv
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite.sv|
+!i113 1
+R7
+R8
+R9
+ncolor_mapper4@sprite
+venemy4
+R1
+R2
+!i10b 1
+!s100 SPI=XbCn9:L?PVfF77WbN0
+ImL@RX4;c@I<fA5aAAaPFM2
+R3
+!s105 enemy4Hit_sv_unit
+S1
+R0
+w1544499944
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy4Hit.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy4Hit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy4Hit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy4Hit.sv|
+!i113 1
+R7
+R8
+R9
+venemy_health4
+R1
+R2
+!i10b 1
+!s100 4^WnD54`5g>GDjK@JOiVJ0
+IcSTIUf89dARcMKbIfOEBd0
+R3
+!s105 enemy_health4_sv_unit
+S1
+R0
+w1544504225
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy_health4.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy_health4.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy_health4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy_health4.sv|
+!i113 1
+R7
+R8
+R9
+vframeCounter
+R1
+Z10 !s110 1544563695
+!i10b 1
+!s100 YdziVfAaG__BDQ4:HK^lK0
+IaTSGUa==aLW[FCbfl<mao3
+R3
+!s105 frameCounter_sv_unit
+S1
+R0
+w1544414670
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/frameCounter.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/frameCounter.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z11 !s108 1544563695.000000
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/frameCounter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/frameCounter.sv|
+!i113 1
+R7
+R8
+R9
+nframe@counter
+vframeRAM
+R1
+Z12 !s110 1544563697
+!i10b 1
+!s100 T9NULXI]6]1zkHiV7EgAQ1
+I7MbV956OEK;OE8b2624]R1
+R3
+!s105 ram_sv_unit
+S1
+R0
+w1544563483
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ram.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ram.sv
+L0 7
+R5
+r1
+!s85 0
+31
+Z13 !s108 1544563697.000000
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ram.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ram.sv|
+!i113 1
+R7
+R8
+R9
+nframe@r@a@m
+vhealth
+R1
+R10
+!i10b 1
+!s100 <OK9W`BPQocc7aWz>VCn22
+I:n:zjd[_H;0>Mf?nFLC`b0
+R3
+!s105 health_sv_unit
+S1
+R0
+w1544495396
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/health.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/health.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/health.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/health.sv|
+!i113 1
+R7
+R8
+R9
+vHexDriver
+R1
+R10
+!i10b 1
+!s100 hKBo4zbCRmY3[Ac9JZP;<0
+ITILM40FOcZ7QC`>NJ7hke3
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+w1443471228
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv|
+!i113 1
+R7
+R8
+R9
+n@hex@driver
+vplatform
+R1
+R10
+!i10b 1
+!s100 ]FcW1Wi_hA1R6LP7P24=D2
+I4<iK>7G]YI2[XU3LP;XMF0
+R3
+!s105 platform2028429_sv_unit
+S1
+R0
+w1544407658
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (4).sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (4).sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (4).sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (4).sv|
+!i113 1
+R7
+R8
+R9
+vtestbench
+R1
+R12
+!i10b 1
+!s100 NdGEE>ZWCc0:nkc[`Jhnm3
+INDQ_cblzOHH:AY[PY7IT70
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1544332859
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/testbench.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/testbench.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/testbench.sv|
+!i113 1
+R7
+R8
+R9
+vtop_level_pball
+R1
+R12
+!i10b 1
+!s100 S@<m234E?]OPi10NQ6D0M0
+IY1hG41KHQhV:9@0j[`0413
+R3
+!s105 top_level_pball_sv_unit
+S1
+R0
+w1544562496
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv|
+!i113 1
+R7
+R8
+R9
+vvga_clk
+Z14 !s110 1544563694
+!i10b 1
+!s100 z^J0AX6[cg^^?mY=Yj_Vj0
+Ica`0J>dN6W]G0oV8`=HWo0
+R3
+R0
+w1540088534
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.v
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.v
+L0 39
+R5
+r1
+!s85 0
+31
+Z15 !s108 1544563694.000000
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.v|
+!i113 1
+Z16 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided
+R9
+vvga_clk_altpll
+R14
+!i10b 1
+!s100 M:z4m=8?iG0fP6=5PXSTl1
+IC3E8W;o1chZNGAJBAT7k]2
+R3
+R0
+w1539916054
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/vga_clk_altpll.v
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/vga_clk_altpll.v
+L0 29
+R5
+r1
+!s85 0
+31
+R15
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/vga_clk_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/vga_clk_altpll.v|
+!i113 1
+R16
+!s92 -vlog01compat -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db
+R9
+vVGA_controller
+R1
+R10
+!i10b 1
+!s100 iZ^ZkeRFZV@Tdc684OR@G2
+I0QBz7Jeoz@0DTb28GH_?40
+R3
+!s105 VGA_controller_sv_unit
+S1
+R0
+w1512853694
+8C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/VGA_controller.sv
+FC:/UIUCFall2018/ECE385/Exp8/Lab8_provided/VGA_controller.sv
+L0 26
+R5
+r1
+!s85 0
+31
+R15
+!s107 C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/VGA_controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided|C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/VGA_controller.sv|
+!i113 1
+R7
+R8
+R9
+n@v@g@a_controller

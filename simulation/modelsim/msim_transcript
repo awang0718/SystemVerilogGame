@@ -1,0 +1,209 @@
+# Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# do lab8_run_msim_rtl_systemverilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:14 on Dec 11,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/vga_clk.v 
+# -- Compiling module vga_clk
+# 
+# Top level modules:
+# 	vga_clk
+# End time: 15:28:14 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/vga_clk_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:14 on Dec 11,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/vga_clk_altpll.v 
+# -- Compiling module vga_clk_altpll
+# 
+# Top level modules:
+# 	vga_clk_altpll
+# End time: 15:28:14 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/VGA_controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:14 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/VGA_controller.sv 
+# -- Compiling module VGA_controller
+# 
+# Top level modules:
+# 	VGA_controller
+# End time: 15:28:15 on Dec 11,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:15 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 15:28:15 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/health.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:15 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/health.sv 
+# -- Compiling module health
+# 
+# Top level modules:
+# 	health
+# End time: 15:28:15 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/frameCounter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:15 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/frameCounter.sv 
+# -- Compiling module frameCounter
+# 
+# Top level modules:
+# 	frameCounter
+# End time: 15:28:15 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (4).sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:15 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/platform (4).sv 
+# -- Compiling module platform
+# 
+# Top level modules:
+# 	platform
+# End time: 15:28:15 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy_health4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:16 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy_health4.sv 
+# -- Compiling module enemy_health4
+# 
+# Top level modules:
+# 	enemy_health4
+# End time: 15:28:16 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy4Hit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:16 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/enemy4Hit.sv 
+# -- Compiling module enemy4
+# 
+# Top level modules:
+# 	enemy4
+# End time: 15:28:16 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:16 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ball4.sv 
+# -- Compiling module ball4
+# 
+# Top level modules:
+# 	ball4
+# End time: 15:28:16 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:16 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/Color_Mapper4Sprite.sv 
+# -- Compiling module color_mapper4Sprite
+# 
+# Top level modules:
+# 	color_mapper4Sprite
+# End time: 15:28:16 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ram.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:17 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/ram.sv 
+# -- Compiling module frameRAM
+# 
+# Top level modules:
+# 	frameRAM
+# End time: 15:28:17 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:17 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv 
+# -- Compiling module top_level_pball
+# 
+# Top level modules:
+# 	top_level_pball
+# End time: 15:28:17 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlib lab8_soc
+# ** Warning: (vlib-34) Library already exists at "lab8_soc".
+# vmap lab8_soc lab8_soc
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap lab8_soc lab8_soc 
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided {C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:28:17 on Dec 11,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided" C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:28:17 on Dec 11,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab8_soc -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab8_soc -voptargs=""+acc"" testbench 
+# Start time: 15:28:17 on Dec 11,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.top_level_pball
+# Loading work.vga_clk
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.VGA_controller
+# Loading work.ball4
+# Loading work.enemy4
+# Loading work.platform
+# Loading work.health
+# Loading work.enemy_health4
+# Loading work.frameCounter
+# Loading work.color_mapper4Sprite
+# Loading work.frameRAM
+# Loading work.HexDriver
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-3015) C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv(150): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tp/hex_inst_0 File: C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv
+# ** Warning: (vsim-3015) C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv(151): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tp/hex_inst_1 File: C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 10000 ns
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: testbench.tp.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint  \
+sim:/testbench/tp/ram/mem
+restart -f
+# ** Warning: (vsim-3015) C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv(150): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tp/hex_inst_0 File: C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv
+# ** Warning: (vsim-3015) C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/top_level_pball.sv(151): [PCDPC] - Port size (7) does not match connection size (1) for port 'Out0'. The port definition is at: C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tp/hex_inst_1 File: C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/HexDriver.sv
+run 50000ns
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: testbench.tp.vga_clk_instance.altpll_component.cycloneiii_pll.pll3
+# End time: 15:30:12 on Dec 11,2018, Elapsed time: 0:01:55
+# Errors: 0, Warnings: 4

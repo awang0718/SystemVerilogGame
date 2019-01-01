@@ -1,0 +1,70 @@
+module top_level_pball( input    Clk,
+					input		frame_clk,
+					input		Reset,
+             input        [3:0]  KEY,          //bit 0 is set up as Reset
+				 input			[7:0] keycode
+);
+
+	logic [9:0] DrawX, DrawY;
+	logic is_ball, is_shield, is_attack, is_move;
+	logic [13:0] excess_is_move;
+	logic[9:0] start_X, start_Y;
+	logic is_platform, can_move;
+	logic[13:0] bot, top;
+	logic[13:0] player_location;
+	logic [13:0] platform_change[0:15][0:2];
+	logic [13:0] excess;
+	logic [13:0] top_left, top_right;
+
+	logic [13:0] left_bound, right_bound;
+	logic is_enemy_shield, is_enemy_attack;
+	logic [13:0] enemy_location;
+	logic hit_en;
+	logic [2:0] ball_health_in, ball_health_out;
+	
+	
+	ball2 b(.*);
+			
+			
+	platform plat(
+						.Clk(Clk), 
+						.Reset(Reset),
+						.frame_clk(frame_clk),
+						.keycode(keycode),
+						.DrawX(DrawX),
+						.DrawY(DrawY),
+						.is_move(is_move),
+						.player_location(player_location),
+						.start_X(start_X),
+						.start_Y(start_Y),
+						.is_platform(is_platform),
+						.can_move(can_move),
+						.top(top),
+						.bot(bot),
+						.platform_change(platform_change),
+						.excess(excess),
+						.excess_is_move(excess_is_move),
+						.top_right(top_right),
+						.top_left(top_left)
+	);
+	
+	enemy en(.Clk(Clk),
+				.Reset(Reset), 
+				.frame_clk(frame_clk),
+				.DrawX(DrawX), 
+				.DrawY(DrawY),
+				.keycode(keycode),
+				.can_move(can_move),
+				.left_bound(left_bound),
+				.right_bound(right_bound),
+				.platform_change(platform_change),
+				.is_enemy_shield(is_enemy_shield),			 
+				.is_enemy_attack(is_enemy_attack),	
+				.enemy_location(enemy_location),
+				.player_location(player_location),
+				.hit_en(hit_en),
+				.ball_health_out(ball_health_out),
+				.ball_health_in(ball_health_in)
+					);
+
+endmodule

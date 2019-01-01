@@ -1,0 +1,195 @@
+//-------------------------------------------------------------------------
+//    Ball.sv                                                            --
+//    Viral Mehta                                                        --
+//    Spring 2005                                                        --
+//                                                                       --
+//    Modified by Stephen Kempf 03-01-2006                               --
+//                              03-12-2007                               --
+//    Translated by Joe Meng    07-07-2013                               --
+//    Modified by Po-Han Huang  12-08-2017                               --
+//    Spring 2018 Distribution                                           --
+//                                                                       --
+//    For use with ECE 385 Lab 8                                         --
+//    UIUC ECE Department                                                --
+//-------------------------------------------------------------------------
+
+
+module  ball ( input         Clk,                // 50 MHz clock
+                             Reset,              // Active-high reset signal
+                             frame_clk,          // The clock indicating a new frame (~60Hz)
+               input [9:0]   DrawX, DrawY,       // Current pixel coordinates
+               output logic  is_ball,            // Whether current pixel belongs to ball or background
+					
+					input [7:0] keycode
+              );
+    
+	 parameter [9:0] Ball_X_Size = 10'd8;        // BallX size 
+	 parameter [9:0] Ball_Y_Size = 10'd16;        // BallY size
+	 parameter [9:0] Ball_Y_Crouch = 10'd8;		// BallY shrink (from crouch);  
+
+    parameter [9:0] Ball_X_Start = 10'd320;  // Start position on the X axis
+    parameter [9:0] Ball_Y_Start = 10'd479 - Ball_Y_Size;  	// Start position on the Y axis
+    parameter [9:0] Ball_X_Min = 10'd0;       // Leftmost point on the X axis
+    parameter [9:0] Ball_X_Max = 10'd639;     // Rightmost point on the X axis
+    parameter [9:0] Ball_Y_Min = 10'd0;       // Topmost point on the Y axis
+    parameter [9:0] Ball_Y_Max = 10'd479;     // Bottommost point on the Y axis
+    parameter [9:0] Ball_X_Step = 10'd3;      // Step size on the X axis
+    parameter [9:0] Ball_Y_Step = 10'd5;      // Step size on the Y axis   
+    
+    logic [9:0] Ball_X_Pos, Ball_X_Motion, Ball_Y_Pos, Ball_Y_Motion;
+    logic [9:0] Ball_X_Pos_in, Ball_X_Motion_in, Ball_Y_Pos_in, Ball_Y_Motion_in;
+	 
+	 logic crouch, crouch_in;
+	 logic Ball_Y_SizeReal, Ball_Y_SizeReal_in;
+    
+    //////// Do not modify the always_ff blocks. ////////
+    // Detect rising edge of frame_clk
+    logic frame_clk_delayed, frame_clk_rising_edge;
+    always_ff @ (posedge Clk) begin
+        frame_clk_delayed <= frame_clk;
+        frame_clk_rising_edge <= (frame_clk == 1'b1) && (frame_clk_delayed == 1'b0);
+    end
+    // Update registers
+    always_ff @ (posedge Clk)
+    begin
+        if (Reset)
+        begin
+            Ball_X_Pos <= Ball_X_Start;
+            Ball_Y_Pos <= Ball_Y_Start;
+            Ball_X_Motion <= 10'd0;
+            Ball_Y_Motion <= 10'd0;
+				
+				crouch = 1'd0;
+				Ball_Y_SizeReal = Ball_Y_Size;
+        end
+        else
+        begin
+            Ball_X_Pos <= Ball_X_Pos_in;
+            Ball_Y_Pos <= Ball_Y_Pos_in;
+            Ball_X_Motion <= Ball_X_Motion_in;
+            Ball_Y_Motion <= Ball_Y_Motion_in;
+				
+				crouch = crouch_in;
+				Ball_Y_SizeReal = Ball_Y_SizeReal_in;
+        end
+    end
+    //////// Do not modify the always_ff blocks. ////////
+    
+    // You need to modify always_comb block.
+    always_comb
+    begin
+        // By default, keep motion and position unchanged
+        Ball_X_Pos_in = Ball_X_Pos;
+        Ball_Y_Pos_in = Ball_Y_Pos;
+        Ball_X_Motion_in = Ball_X_Motion;
+        Ball_Y_Motion_in = Ball_Y_Motion;  
+        //Ball_Y_Motion_in = /*Ball_Y_Motion +*/ 1'b0;
+		  
+		  crouch_in = crouch;
+		  Ball_Y_SizeReal_in = Ball_Y_SizeReal;
+        
+        // Update position and motion only at rising edge of frame clock
+        if (frame_clk_rising_edge)
+        begin
+				Ball_X_Motion_in = 10'd0;
+				Ball_Y_Motion_in = 10'd0;
+				crouch_in = 1'b0;
+				
+				if (crouch) 
+					Ball_Y_SizeReal_in = Ball_Y_Crouch;
+				else
+					Ball_Y_SizeReal_in = Ball_Y_Size;
+					
+				if (Ball_Y_Pos + Ball_Y_SizeReal < Ball_Y_Max - 1'b1)
+					Ball_Y_Motion_in = 1'b1;
+		  
+            // Be careful when using comparators with "logic" datatype because compiler treats 
+            //   both sides of the operator as UNSIGNED numbers.
+            // e.g. Ball_Y_Pos - Ball_Size <= Ball_Y_Min 
+            // If Ball_Y_Pos is 0, then Ball_Y_Pos - Ball_Size will not be -4, but rather a large positive number.
+            if( Ball_Y_Pos + Ball_Y_SizeReal >= Ball_Y_Max - 1'b1 )  // Ball is at the bottom edge
+               begin
+						// Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);
+						Ball_Y_Motion_in = 1'b0;
+						Ball_X_Motion_in = Ball_X_Motion_in;
+					end  // 2's complement.  
+            if ( Ball_Y_Pos <= Ball_Y_Min + 1'b1 + Ball_Y_SizeReal )  // Ball is at the top edge
+               begin
+						//Ball_Y_Motion_in = 1'b0;
+						Ball_Y_Motion_in = ~(Ball_Y_Step);
+						Ball_X_Motion_in = Ball_X_Motion_in;
+					end
+            if( Ball_X_Pos + Ball_X_Size >= Ball_X_Max - 1'b1)  // Ball is at the right edge
+               begin
+						//Ball_X_Motion_in = 1'b0;
+						Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+						Ball_Y_Motion_in = Ball_Y_Motion_in;
+					end  // 2's complement.  
+            if ( Ball_X_Pos <= Ball_X_Min + 1'b1 + Ball_X_Size )  // Ball is at the left edge
+               begin
+						//Ball_X_Motion_in = 1'b0;
+						Ball_X_Motion_in = Ball_X_Step;
+						Ball_Y_Motion_in = Ball_Y_Motion_in;	
+					end
+					 
+				if(keycode == 8'd26)	// W: Move up
+					begin
+						if (Ball_Y_Pos + Ball_Y_SizeReal >= Ball_Y_Max - 1'b1)
+							Ball_Y_Motion_in = (~(10'd20) + 1'b1);
+						else
+							Ball_Y_Motion_in = 1'b1;
+						
+						Ball_X_Motion_in = Ball_X_Motion_in;						
+					end				
+				if (keycode ==	8'd22)	// S: Move down
+					begin
+						crouch_in = 1'b1;
+						if( Ball_Y_Pos + Ball_Y_SizeReal >= Ball_Y_Max - 1'b1 )  // Ball is at the bottom edge
+							Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);
+						else 
+							Ball_Y_Motion_in = Ball_Y_Motion_in;			
+						Ball_X_Motion_in = Ball_X_Motion_in;		
+					end						
+				if (keycode == 8'd04)	// A: Move left
+					begin
+						if ( Ball_X_Pos <= Ball_X_Min + 1'b1 + Ball_X_Size )  // Ball is at the left edge
+							Ball_X_Motion_in = Ball_X_Step;	
+						else
+							Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+						Ball_Y_Motion_in = Ball_Y_Motion_in;
+					end						
+				if (keycode == 8'd07)	// D: Move right
+					begin
+						if( Ball_X_Pos + Ball_X_Size >= Ball_X_Max - 1'b1)  // Ball is at the right edge
+							Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+						else
+							Ball_X_Motion_in = Ball_X_Step;
+						Ball_Y_Motion_in = Ball_Y_Motion_in;	
+					end	
+				// if (keycode != 8'd22) crouch_in = 1'b0;
+				        
+            // Update the ball's position with its motion
+            Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion;
+            Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion;
+        end
+    end
+    
+    // Compute whether the pixel corresponds to ball or background
+    /* Since the multiplicants are required to be signed, we have to first cast them
+       from logic to int (signed by default) before they are multiplied. */
+    int DistX, DistY, SizeX, SizeY;
+    // assign DistX = (DrawX - Ball_X_Pos >= 0) ? DrawX - Ball_X_Pos : -(DrawX - Ball_X_Pos);
+	 // assign DistY = (DrawY - Ball_Y_Pos >= 0) ? DrawY - Ball_Y_Pos : -(DrawY - Ball_Y_Pos);
+	 assign DistX = DrawX - Ball_X_Pos;
+    assign DistY = DrawY - Ball_Y_Pos;
+    assign SizeX = Ball_X_Size;
+	 assign SizeY = Ball_Y_Size;
+    always_comb begin
+		  // if (DistX <= SizeX && DistY <= SizeY) 
+		  if ( (DistX*DistX <= SizeX*SizeX) && (DistY*DistY <= SizeY*SizeY) ) 
+            is_ball = 1'b1;
+        else
+            is_ball = 1'b0;
+    end
+    
+endmodule

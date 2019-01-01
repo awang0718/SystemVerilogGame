@@ -1,0 +1,43 @@
+module frameCounter (
+				input  logic 		Clk, Reset, hit_en,
+				input logic 		frame_clk,          // The clock indicating a new frame (~60Hz)
+				output logic 		game_over);
+
+	logic frame_clk_delayed, frame_clk_rising_edge;
+   always_ff @ (posedge Clk) begin
+        frame_clk_delayed <= frame_clk;
+        frame_clk_rising_edge <= (frame_clk == 1'b1) && (frame_clk_delayed == 1'b0);
+   end
+				
+	logic[6:0] counter, counter_in;
+	
+	always_ff @ (posedge Clk)
+   begin
+		if (Reset)
+				counter <= 7'd119;
+		else
+				counter <= counter_in;
+   end
+	
+	always_comb
+	begin
+		counter_in = counter;
+		if (frame_clk_rising_edge)
+			begin
+				if (counter == 7'd0)
+					counter_in = 7'd119;
+				else
+					counter_in = counter - 1'd1;
+			end
+			
+	end
+	 
+	always_comb
+	begin
+		if (health == 3'b0)
+			game_over = 1'b1;
+		else
+			game_over = 1'b0;
+	end
+
+endmodule

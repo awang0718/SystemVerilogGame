@@ -1,0 +1,107 @@
+Quartus Prime Archive log --	C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/__lab7_usb.auto.qarlog
+
+Archive:	C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/__lab7_usb.auto.qar
+Date:		Tue Jan 01 16:34:14 2019
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+AI_Core_hw.tcl
+AI_interface.sv
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/a_dpfifo_l011.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/a_fefifo_7cf.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/add_sub_7pc.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/add_sub_8pc.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/alt_u_div_07f.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/alt_u_div_27f.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/alt_u_div_37f.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/alt_u_div_87f.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/alt_u_div_a4f.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/alt_u_div_u9f.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/altsyncram_6mc1.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/altsyncram_7o61.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/altsyncram_ac71.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/altsyncram_nio1.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/altsyncram_sqg1.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/cntr_1ob.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/cntr_do7.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/decode_m8a.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lab8.cbx.xml
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lab8.qpf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lab8.ram0_frameRAM_6483c2f6.hdl.mif
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lpm_divide_1bm.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lpm_divide_2bm.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lpm_divide_3bm.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lpm_divide_5bm.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lpm_divide_gcm.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/lpm_divide_m9m.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/mult_p5t.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/mult_t5t.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/mult_v5t.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/mux_anb.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/scfifo_jr21.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/sign_div_unsign_5nh.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/sign_div_unsign_bkh.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/sign_div_unsign_mlh.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/sign_div_unsign_nlh.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/sign_div_unsign_olh.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/sign_div_unsign_qlh.tdf
+C:/UIUCFall2018/ECE385/Exp8/Lab8_provided/db/vga_clk_altpll.v
+Color_Mapper.sv
+Color_Mapper2.sv
+Color_Mapper4.sv
+Color_Mapper4Sprite.sv
+Color_Mapper4Sprite_2.sv
+Color_Mapper4Sprite_Health.sv
+Enemy_Jump (1).sv
+Enemy_Jump.sv
+HexDriver.sv
+PLLJ_PLLSPE_INFO.txt
+VGA_controller.sv
+__lab7_usb.auto.qarlog
+ball.sv
+ball.txt
+ball2.txt
+ball2_7.sv
+ball2_8.sv
+ball2_9.sv
+ball4.sv
+ball_sprite.txt
+c:/intelfpga_lite/18.0/quartus/bin64/assignment_defaults.qdf
+enemy.sv
+enemy4.sv
+enemy4Hit.sv
+enemyHitJump.sv
+enemy_health.sv
+enemy_health4.sv
+final_project (1).sv
+final_project (2).sv
+final_project.sv
+final_project4.sv
+frameCounter.sv
+health.sv
+hpi_io_intf.sv
+lab7_usb.qsf
+lab8.sv
+lab8_assignment_defaults.qdf
+lab8_description.txt
+lab8_soc.qsys
+lab8_soc1.qsys
+lab8_tmp_archive.qarlog
+mylog.txt.txt
+platform (1).sv
+platform (2).sv
+platform (3).sv
+platform (4).sv
+platform.sv
+platform4.sv
+ram.sv
+sdcFile.sdc
+testbench.sv
+top_level_pball.sv
+vga_clk.ppf
+vga_clk.qip
+vga_clk.v
+	======= Total: 96 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
